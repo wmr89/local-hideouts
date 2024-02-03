@@ -4,7 +4,7 @@ const sequelize = require("../config/connection");
 
 class LocationTag extends Model {}
 
-ProductTag.init(
+LocationTag.init(
   {
     id: {
       type: DataTypes.INTEGER,
