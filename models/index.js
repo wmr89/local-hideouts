@@ -15,9 +15,19 @@ Comment.belongsTo(Location, {
   foreignKey: "location_id",
 });
 
+Location.hasMany(Comment, {
+  foreignKey: "location_id",
+  onDelete: "CASCADE",
+});
+
 Location.belongsTo(State, {
   foreignKey: "state_id",
 });
+
+State.hasMany(Location, {
+  foreignKey: "state_id",
+  onDelete:"CASCADE",
+})
 
 Location.belongsToMany(Category, {
   through: LocationCategory,
