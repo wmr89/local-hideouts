@@ -4,7 +4,9 @@ const { State, Location} = require('../../models');
 router.get('/', async (req, res) => {
     // find all states
     try {
-      const stateData = await State.findAll({});
+      const stateData = await State.findAll({
+        include: [{model: Location, required: true}],
+      });
       res.status(200).json(stateData);
     } catch (err) {
       res.status(500).json(err);
