@@ -10,6 +10,16 @@ const locationData = [
   },
 ];
 
+const locationData = [
+  {
+    name: "Caputo's",
+    directions: "314 W Broadway, Salt Lake City, UT",
+    description:
+      "Market and deli that offers regional Italian and Southern European foods....",
+    state_id: 44,
+  },
+];
+
 const seedLocations = () => Location.bulkCreate(locationData);
 
 module.exports = seedLocations;
