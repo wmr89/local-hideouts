@@ -1,0 +1,164 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Haunts</title>
+    <link 
+        rel="stylesheet" 
+        href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <script
+        defer
+        src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+    ></script>
+    
+
+</head>
+<body>
+    <header class="section has-background-link py-8 has-text-white"></header>
+        <div class="container">
+            <div class="columns">
+                <div class="column">
+                    <span class="Icon">
+                        <i class="far fa-envelope"></i>
+                    </span>
+                    kadrob5@gmail.com
+                </div>
+         
+                 <div class="column">
+                    <span class="Icon">
+                        <i class="far fa-envelope"></i>
+                    </span>
+                        kadrob5@gmail.com
+                </div>
+        
+            <div class="column">
+                    <span class="Icon">
+                        <i class="far fa-envelope"></i>
+                    </span>
+                        login
+                </div>  
+            </div>
+        </div>
+    </header> 
+    <section class="section" id="hero">
+        <div class="container">
+            <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                  <a class="navbar-item" href="https://bulma.io">
+                    <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+                  </a>
+              
+                  <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                  </a>
+                </div>
+              
+                <div id="navbarBasicExample" class="navbar-menu">
+                  <div class="navbar-start">
+                    <a class="navbar-item has-text-white">
+                      Home
+                    </a>
+              
+                    <a class="navbar-item has-text-white">
+                      Documentation
+                    </a>
+              
+                    <div class="navbar-item has-dropdown is-hoverable">
+                      <a class="navbar-link has-text-black">
+                        More
+                      </a>
+              
+                      <div class="navbar-dropdown">
+                        <a class="navbar-item">
+                          Search by Location
+                        </a>          
+                        <a class="navbar-item">
+                          Search by Category
+                        </a>
+                        <a class="navbar-item">
+                          Contact
+                        </a>
+                        <hr class="navbar-divider">
+                        <a class="navbar-item">
+                          Report an issue
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+              
+                  <div class="navbar-end">
+                    <div class="navbar-item">
+                      <div class="buttons">
+                        <a class="button is-info">
+                          <strong>Sign up</strong>
+                        </a>
+                        <a class="button is-warning">
+                          Log in
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+              <div class="columns pt-6">
+                <div class="columns mt-6">
+                  <span class="icon has-text-warning">
+                    <i class="fa-solid fa-server"></i>
+                  </span>
+                  <h1 class="is-size-1 has-text-white">
+                    Web Design<br />
+                    & Development
+          
+                  </h1>
+                  <p class="has-text-black">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, magni maxime maiores blanditiis, minima odit, dolore ipsa excepturi possimus id aspernatur quibusdam. Id quod provident nobis molestias illum. Mollitia, aspernatur?
+                  </p>
+
+              </div>
+              <div class="column mt-6"
+      </div>
+     
+    </section> 
+    <section class="section" id="Login">
+
+    </section>
+    <section class="section" id="Search Haunts">
+        
+    </section>
+    <section class="section" id="Add Haunt">
+
+    </section>
+
+              
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+// Get all "navbar-burger" elements
+const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+// Add a click event on each of them
+$navbarBurgers.forEach( el => {
+  el.addEventListener('click', () => {
+
+    // Get the target from the "data-target" attribute
+    const target = el.dataset.target;
+    const $target = document.getElementById(target);
+
+    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+    el.classList.toggle('is-active');
+    $target.classList.toggle('is-active');
+
+  });
+});
+
+});
+    </script>
+
+    <h1>Hello!</h1>
+    
+    
+</body>
+</html>
