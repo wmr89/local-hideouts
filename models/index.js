@@ -15,6 +15,11 @@ Comment.belongsTo(Location, {
   foreignKey: "location_id",
 });
 
+User.hasMany(Comment, {
+  foreignKey: "user_id",
+  onDelete: "CASCADE",
+});
+
 Location.hasMany(Comment, {
   foreignKey: "location_id",
   onDelete: "CASCADE",

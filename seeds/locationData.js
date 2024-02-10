@@ -19,7 +19,7 @@ const locationData = [
     name: "The Drops",
     directions: "42.97490654405323, -114.41757347287066",
     description:
-      "The drops is canal and bridge jumping location. Jump from the bridge and float down the rapids. A life jacket is a smart choice and make sure to get out at the pull out spot! CAUTION: Like many adventures there is danger, recreate carefully!",
+      "The drops is a canal and bridge jumping location. Jump from the bridge and float down the rapids. A life jacket is a smart choice and make sure to get out at the pull out spot! CAUTION: Like many adventures there is danger, recreate carefully!",
     state_id: 12,
   },
   {
