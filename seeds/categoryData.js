@@ -5,6 +5,7 @@ const categoryData = [
   { name: "Live Music" },
   { name: "Outdoor Adventure" },
   { name: "Restaurant"},
+  { name: "Historic Site"},
 ];
 
 const seedCategories = () => Category.bulkCreate(categoryData);

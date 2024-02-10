@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const withAuth = require('../../utils/auth');
-const { Location, Tag, Comment, LocationTag, Category, LocationCategory, State } = require("../../models");
+const { Location, Tag, Comment, LocationTag, Category, LocationCategory, State, User } = require("../../models");
 
 router.get("/", async (req, res) => {
   // find all locations
@@ -20,6 +20,7 @@ router.get("/:id", withAuth, async (req, res) => {
         {model: Category}, 
         {model: Comment },
         {model: State},
+ //       {model: User},
       ],
     });
     if (!locationData) {
