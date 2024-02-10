@@ -1,0 +1,25 @@
+<!-- Loop over each object in the projects array -->
+<h2>Search by State</h2>
+<!-- Loop over each object in the projects array -->
+{{#each states as |state| }}
+<div class="row mb-4 blogpost">
+  <div class="col-md-5">
+    <h2>
+      <a href="/bystate/{{state.id}}">{{state.name}}</a>
+    </h2>
+  </div>
+
+</div>
+{{/each}}
+
+<h2>Search by Category</h2>
+{{#each categories as |category| }}
+<div class="row mb-4 blogpost">
+  <div class="col-md-5">
+    <h2>
+      <a href="/bycategory/{{category.id}}">{{category.name}}</a>
+    </h2>
+  </div>
+
+</div>
+{{/each}}

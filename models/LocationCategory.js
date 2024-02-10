@@ -1,9 +1,10 @@
 const { Model, DataTypes } = require("sequelize");
+
 const sequelize = require("../config/connection");
 
-class Comment extends Model {}
+class LocationCategory extends Model {}
 
-Comment.init(
+LocationCategory.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -11,33 +12,28 @@ Comment.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    body: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    user_id: {
+    location_id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
       references: {
-        model: "user",
+        model: "location",
         key: "id",
       },
     },
-    location_id: {
+    category_id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
       references: {
-        model: "location",
+        model: "category",
         key: "id",
       },
     },
   },
   {
     sequelize,
+    timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "comment",
+    modelName: "location_category",
   }
 );
 
-module.exports = Comment;
+module.exports = LocationCategory;

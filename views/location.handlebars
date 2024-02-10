@@ -1,0 +1,32 @@
+<!-- Loop over each object in the projects array -->
+<h2>{{name}}</h2>
+<h3>Directions: {{directions}}</h3>
+<div>
+    <h3>Local hideout description</h3>
+    <p>{{description}}</p>
+</div>
+<div>
+    <h3>comments</h3>
+    {{#each comments as |comment| }}
+  <p>
+    {{comment.body}}
+  </p>
+  <p>
+    {{comment.user.username}}
+  </p>
+  </div>
+  {{/each}}
+
+  <form class="form new-comment-form">
+      <div class="form-group">
+        <h6 for="project-desc">Comment</h6>
+        <textarea class="form-input" id="comment-body" name="comment-body"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Submit Comment</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="/js/comment.js"></script>
