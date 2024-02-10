@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const withAuth = require('../utils/auth');
 const { State, Category, Location, LocationCategory, Tag, LocationTag, User, Comment } = require('../models');
 
 router.get('/', async (req, res) => {
@@ -129,6 +130,23 @@ router.get('/login', (req, res) => {
 
   res.render('login');
 });
+
+router.post('location/:id/comment', withAuth, async (req, res) => {
+  try {
+    const locationId = req.params.id;
+    const newComment = await Comment.create({
+      ...req.body,
+      user_id: req.session.user_id,
+      location_id: locationId,
+    });
+
+    res.status(200).json(newComment);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+module.exports = router;
+
 
 
 // // GET one painting
