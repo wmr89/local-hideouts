@@ -12,15 +12,17 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/:id", withAuth, async (req, res) => {
+router.get("/:id", async (req, res) => {
   // find a single location by its `id`
   try {
     const locationData = await Location.findByPk(req.params.id, {
       include: [{ model: Tag}, 
         {model: Category}, 
-        {model: Comment },
+        {
+          model: Comment, 
+          include: [ {model:User }],
+        },
         {model: State},
- //       {model: User},
       ],
     });
     if (!locationData) {
