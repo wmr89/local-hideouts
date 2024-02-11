@@ -49,24 +49,14 @@ router.get('/bystate/:id', async (req, res) => {
 //GET one Category
 router.get('/bycategory/:id', async (req, res) => {
   try {
-    const categoryData = await Category.findByPk(req.params.id)
-    const locationCategoryData = LocationCategory.findAll({
-      where: {
-        category_id: req.params.id,
-      }
-    });
-    const locationCategories = locationCategoryData.get({ plain: true });
-
-    const locationData = await Location.findAll({
-      where: {
-        location_id: locationCategories.location_id,
-      }
-    });
-    const locations = locationData.map((location)=>location.get({ plain: true }));
+    const categoryData = await Category.findByPk(req.params.id, {
+      include: [{model: Location, through: LocationCategory}]
+    })
     const category = categoryData.get({ plain: true });
+    console.log(category);
     res.render('bystate', {
-      locations,
-     category
+     category,
+     locations: category.locations
     });
   } catch (err) {
     console.log(err);
@@ -83,9 +73,7 @@ router.get('/location/:id', async (req, res) => {
       ],
     }
     );
-
     const location = locationData.get({ plain: true });
-
     res.render('location'
     , {
       ...location,
