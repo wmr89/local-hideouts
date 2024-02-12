@@ -16,9 +16,43 @@ header, .project:not(:last-child) {
     color: #065b83;
     text-decoration: underline;
   }
-  
-  .dollar-amount {
-    color: #056605;
-    font-weight: bold;
-    margin-left: -5px;
+
+  .card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
   }
+  
+  .card-title a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .card-title a:hover {
+    color: #007bff;
+  }
+  
+  .container {
+    margin-top: 20px;
+  }
+  .container1 {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .container2 {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+
+  

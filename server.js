@@ -1,6 +1,5 @@
 const path = require('path');
 const express = require('express');
-// Import express-session
 const session = require('express-session');
 const exphbs = require('express-handlebars');
 
@@ -12,9 +11,8 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// Set up sessions
 const sess = {
-    secret: 'Super secret secret',
+    secret: "Super secret secret",
     cookie: {
       maxAge: 300000,
       httpOnly: true,

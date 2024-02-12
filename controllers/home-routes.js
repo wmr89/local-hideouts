@@ -86,31 +86,7 @@ router.get('/location/:id', async (req, res) => {
   }
 });
 
-// router.get("/location/:id", async (req, res) => {
-//   // find a single location by its `id`
-//   try {
-//     const locationData = await Location.findByPk(req.params.id, {
-//       include: [{ model: Tag}, 
-//         {model: Category}, 
-//         {
-//           model: Comment, 
-//           include: [ {model:User }],
-//         },
-//         {model: State},
-//       ],
-//     });
-//     if (!locationData) {
-//       res.status(404).json({ message: "No Location found with that id!" });
-//       return;
-//     }
-//     res.status(200).json(locationData);
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
-
 router.get('/login', (req, res) => {
-  // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
     res.redirect('/');
     return;
@@ -133,27 +109,5 @@ router.post('location/:id/comment', withAuth, async (req, res) => {
     res.status(400).json(err);
   }
 });
-module.exports = router;
-
-
-
-// // GET one painting
-// router.get('/painting/:id', async (req, res) => {
-//   try {
-//     const dbPaintingData = await Painting.findByPk(req.params.id);
-
-//     const painting = dbPaintingData.get({ plain: true });
-
-//     res.render('painting', {
-//       painting,
-//       // We are not incrementing the 'countVisit' session variable here
-//       // but simply sending over the current 'countVisit' session variable to be rendered
-//       countVisit: req.session.countVisit,
-//     });
-//   } catch (err) {
-//     console.log(err);
-//     res.status(500).json(err);
-//   }
-// });
 
 module.exports = router;

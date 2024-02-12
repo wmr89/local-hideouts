@@ -2,7 +2,6 @@ const newFormHandler = async (event) => {
     event.preventDefault();
     const url=window.location.pathname
     const id = url.split('/')[2];
-    console.log(id)
     const body = document.querySelector('#comment-body').value.trim();
   
     if (body) {
@@ -19,9 +18,8 @@ const newFormHandler = async (event) => {
         alert('Failed to post comment');
       }
     }
-  };
+  };  
 
-    
   document
     .querySelector('.new-comment-form')
     .addEventListener('submit', newFormHandler);
